@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muslim Bayschanov - Portfolio BTS SIO SISR</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <div class="loader-text">INITIALISATION DU SYSTÈME...</div>
+        </div>
+    </div>
+
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite"></i>
+            <p><strong>Respect de la vie privée :</strong> Ce site n'utilise aucun cookie publicitaire ou de traçage tiers. Bonne visite !</p>
+        </div>
+        <button id="accept-cookies" class="btn btn-primary btn-small">C'est noté</button>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MB</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="#profile" class="nav-link">Profil</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Formations</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Expériences</a></li>
+                <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Compétences</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projets</a></li>
+                <li class="nav-item"><a href="#research" class="nav-link">Veille</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-background" id="hero-background"></div>
+        <div class="floating-particles"></div>
+        <div class="hero-content">
+            <div class="hero-avatar" id="hero-avatar"></div>
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Muslim Bayschanov</span>
+                    <span class="title-line">Futur Administrateur Système & Réseau</span>
+                </h1>
+                <p class="hero-subtitle">Étudiant en BTS SIO option SISR. Passionné par l'infrastructure, la virtualisation et la cybersécurité.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                        <span>Voir mes projets</span>
+                        <i class="fas fa-network-wired"></i>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                        <span>Me contacter</span>
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Profil</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="profile-content">
+                <div class="profile-image">
+                    <div class="image-container">
+                        <img src="photomoi.jpg" alt="Muslim Bayschanov">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <div class="quote-container">
+                        <blockquote class="animated-quote">
+                            « Je m'appelle Muslim Bayschanov. Je suis actuellement étudiant au lycée public Turgot de Paris (3ème arr.) en première année de BTS SIO (Services Informatiques aux Organisations), option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux). <br><br>
+                            Mon objectif est de me spécialiser dans l'administration des systèmes, la sécurité des réseaux et le cloud computing. »
+                        </blockquote>
+                        <cite>- Muslim Bayschanov</cite>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="cvMuslim.pdf" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-file-download"></i> Télécharger mon CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Formations</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="education-intro">
+                <div class="quote-container">
+                    <blockquote class="animated-quote">
+                        Avant de commencer à parler de moi, je vous propose de présenter en premier lieu ma filière dont je suis affecté. <br><br>
+                        Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO) s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. <br><br>
+                        Le BTS SIO propose deux spécialités :
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="card-header">
+                        <h3>Option SISR</h3>
+                        <h4>Solutions d’Infrastructure, Systèmes et Réseaux</h4>
+                        <span class="duration">Administration & Réseaux</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Cette spécialité forme à la gestion, à la maintenance et à la sécurisation des infrastructures réseaux et systèmes.</p>
+                        <ul class="achievements">
+                            <li>Installation, configuration et administration des serveurs</li>
+                            <li>Gestion des réseaux (VLAN, routage, sécurité)</li>
+                            <li>Surveillance et maintenance du parc informatique</li>
+                            <li>Déploiement de solutions de cybersécurité</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="card-header">
+                        <h3>Option SLAM</h3>
+                        <h4>Solutions Logicielles et Applications Métiers</h4>
+                        <span class="duration">Développement & Programmation</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Cette spécialité forme aux métiers du développement et de la création d’applications adaptées aux besoins des entreprises.</p>
+                        <ul class="achievements">
+                            <li>Développement d’applications web et mobiles</li>
+                            <li>Création et gestion de bases de données</li>
+                            <li>Analyse des besoins clients et modélisation</li>
+                            <li>Maintenance et amélioration des programmes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-year="2026">
+                    <div class="timeline-content">
+                        <h3>BTS SIO - Option SISR</h3>
+                        <h4>Lycée Turgot, Paris</h4>
+                        <p>Solutions d’Infrastructure, Systèmes et Réseaux.</p>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">% complété</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-content">
+                        <h3>Baccalauréat Technologique STMG</h3>
+                        <h4>Lycée Jean Macé, Vitry-Sur-Seine</h4>
+                        <p>Spécialité Mercatique et Ressources Humaines.</p>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-label">Obtenu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Expériences</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-carousel">
+                <div class="carousel-container">
+                    <div class="experience-card active">
+                        <div class="card-header">
+                            <h3>Hôte de caisse & Employé polyvalent</h3>
+                            <h4>E.Leclerc</h4>
+                            <span class="duration">2025 - Présent</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Expérience en grande distribution développant le sens du service et la rigueur.</p>
+                            <ul class="achievements">
+                                <li>Accueil et conseil client</li>
+                                <li>Gestion des encaissements et fiabilité</li>
+                                <li>Travail en équipe et gestion du stress</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Stagiaire Technicien Informatique</h3>
+                            <h4>[À venir]</h4>
+                            <span class="duration">Mai 2025 - Juin 2025</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Stage de première année de BTS SIO.</p>
+                            <ul class="achievements">
+                                <li>Support utilisateur (Helpdesk)</li>
+                                <li>Installation et configuration de postes</li>
+                                <li>Découverte de l'infrastructure réseau</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Développeur Junior</h3>
+                            <h4>WebSolutions Ltd.</h4>
+                            <span class="duration">2018 - 2019</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Contribué à divers projets clients, axé sur le front-end et l'optimisation de l'expérience utilisateur.</p>
+                            <ul class="achievements">
+                                <li>Développement de sites web responsives</li>
+                                <li>Amélioration de la vitesse de chargement des pages</li>
+                                <li>Collaboration avec l'équipe design sur l'UI/UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="changeExperience(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeExperience(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="showCurrentExperience(1)"></span>
+                    <span class="indicator" onclick="showCurrentExperience(2)"></span>
+                    <span class="indicator" onclick="showCurrentExperience(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="certifications-grid-horizontal">
+                <div class="cert-card-horizontal" onclick="openModal('cert1')">
+                    <div class="cert-visual">
+                        <div class="cert-icon-large">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="cert-content-box">
+                        <h3>Introduction to Packet Tracer</h3>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <p class="cert-desc">Simulation réseau, IoT et configuration de base.</p>
+                        <a href="certificatspacket_tracer.pdf" target="_blank" class="btn-text" onclick="event.stopPropagation()">
+                            <i class="fas fa-file-pdf"></i> Voir l'attestation
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cert-card-horizontal" onclick="openModal('cert2')">
+                    <div class="cert-visual">
+                        <div class="cert-icon-large">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                    </div>
+                    <div class="cert-content-box">
+                        <h3>Notions de base sur les réseaux</h3>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <p class="cert-desc">Fondamentaux des protocoles et architectures LAN/WAN.</p>
+                        <a href="certificatsnotions_reseaux.pdf" target="_blank" class="btn-text" onclick="event.stopPropagation()">
+                            <i class="fas fa-file-pdf"></i> Voir l'attestation
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cert-card-horizontal" onclick="openModal('cert3')">
+                    <div class="cert-visual">
+                        <div class="cert-icon-large">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="cert-content-box">
+                        <h3>Introduction à la cybersécurité</h3>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <p class="cert-desc">Protection des données, confidentialité et menaces numériques.</p>
+                        <a href="certificatscybersecurite.pdf" target="_blank" class="btn-text" onclick="event.stopPropagation()">
+                            <i class="fas fa-file-pdf"></i> Voir l'attestation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="skills-grid-detailed">
+                <div class="skill-card-detailed">
+                    <div class="skill-header"><i class="fas fa-desktop skill-icon-top"></i><h3>Systèmes</h3></div>
+                    <ul class="skill-list-content">
+                        <li>Installation/configuration des OS, des équipements</li>
+                        <li>Gestion des utilisateurs, droits d'accès</li>
+                        <li>Sécurisation des systèmes (mises à jour, antivirus...)</li>
+                        <li>Automatisation des tâches système (Bash)</li>
+                    </ul>
+                    <div class="skill-tools-footer">Windows, Windows Server, Ubuntu, Debian</div>
+                </div>
+
+                <div class="skill-card-detailed">
+                    <div class="skill-header"><i class="fas fa-network-wired skill-icon-top"></i><h3>Réseaux</h3></div>
+                    <ul class="skill-list-content">
+                        <li>Mise en place de réseaux locaux (LAN)</li>
+                        <li>Configuration de routeurs et commutateurs</li>
+                        <li>Configuration et gestion des pare-feu</li>
+                        <li>Dépannage et diagnostic réseau</li>
+                    </ul>
+                    <div class="skill-tools-footer">Cisco, Packet Tracer, Wireshark</div>
+                </div>
+
+                <div class="skill-card-detailed">
+                    <div class="skill-header"><i class="fas fa-cloud skill-icon-top"></i><h3>Cloud & Virtualisation</h3></div>
+                    <ul class="skill-list-content">
+                        <li>Mise en place de lab virtuel</li>
+                        <li>Création et gestion de machines virtuelles (VM)</li>
+                        <li>Installation et configuration des hyperviseurs</li>
+                    </ul>
+                    <div class="skill-tools-footer">VirtualBox, VMware, Proxmox</div>
+                </div>
+
+                <div class="skill-card-detailed">
+                    <div class="skill-header"><i class="fas fa-lock skill-icon-top"></i><h3>Cybersécurité</h3></div>
+                    <ul class="skill-list-content">
+                        <li>Protection des données personnelles</li>
+                        <li>Sensibilisation des utilisateurs</li>
+                        <li>Surveillance et analyse des logs</li>
+                        <li>Gestion de mot de passe</li>
+                    </ul>
+                    <div class="skill-tools-footer">Droits d'accès, normes, vocabulaire cyber</div>
+                </div>
+
+                <div class="skill-card-detailed">
+                    <div class="skill-header"><i class="fas fa-tools skill-icon-top"></i><h3>Outils</h3></div>
+                    <ul class="skill-list-content">
+                        <li>Supervision : Zabbix</li>
+                        <li>Analyse réseau : Wireshark</li>
+                        <li>Gestion de mot de passe : KeePass</li>
+                        <li>Gestion de configurations : Ansible</li>
+                    </ul>
+                    <div class="skill-tools-footer">Infrastructure virtuelle et réelle</div>
+                </div>
+
+                <div class="skill-card-detailed">
+                    <div class="skill-header"><i class="fas fa-user-tie skill-icon-top"></i><h3>Gestion de projet</h3></div>
+                    <ul class="skill-list-content">
+                        <li>Planification de projet</li>
+                        <li>Définition des objectifs et livrables</li>
+                        <li>Gestion des ressources</li>
+                        <li>Suivi des délais</li>
+                    </ul>
+                    <div class="skill-tools-footer">Gantt, Trello, Office 365</div>
+                </div>
+            </div>
+
+            <div class="skills-download-buttons">
+                <span class="download-label">Pour visualiser toutes les compétences :</span>
+                <a href="tableausynthese.pdf" class="btn btn-primary btn-small">
+                    <i class="fas fa-file-pdf"></i> Tableau de synthèse .PDF
+                </a>
+                <a href="tableausynthese.xlsx" class="btn btn-secondary btn-small">
+                    <i class="fas fa-file-excel"></i> Tableau de synthèse .XLSX
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projets Réalisés</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                
+                <div class="project-card" onclick="openModal('project1')">
+                    <div class="project-image">
+                        <div class="project-overlay"><i class="fas fa-images"></i></div>
+                        <img src="chickenpoint.png" alt="Site Chicken Point" class="img-cover">
+                    </div>
+                    <div class="project-content">
+                        <h3>Site Chicken Point</h3>
+                        <p>Développement d'une vitrine web pour un restaurant rapide.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('project2')">
+                    <div class="project-image">
+                         <div class="project-overlay"><i class="fas fa-images"></i></div>
+                         <img src="eportfolio1.png" alt="Infrastructure SLM" class="img-cover">
+                    </div>
+                    <div class="project-content">
+                        <h3>Site Eportfolio</h3>
+                        <p>Développement d'une vitrine web pour un eportfolio.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('project3')">
+                    <div class="project-image">
+                         <div class="project-overlay"><i class="fas fa-images"></i></div>
+                         <img src="shoptonauto1.png" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #0a0a0a, #1a1a1a)';" alt="Windows Server" class="img-cover">
+                         <div class="fallback-icon" style="position: absolute; top:50%; left:50%; transform:translate(-50%, -50%); z-index:0; font-size:4rem; color:rgba(255,255,255,0.1);"><i class="fas fa-server"></i></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Site Concession Automobile</h3>
+                        <p>Développement d'une vitrine web pour un concession automobile (en cours).</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">DNS/DHCP</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Veille Technologique</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="research-faq-grid">
+                <div class="faq-card">
+                    <div class="faq-icon"><i class="fas fa-question-circle"></i></div>
+                    <h3>Qu'est-ce que la Veille ?</h3>
+                    <p>C'est l'ensemble des méthodes pour collecter, traiter et diffuser l'information utile à l'entreprise afin d'anticiper les évolutions.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>À quoi ça sert ?</h3>
+                    <p>À rester compétitif, anticiper les menaces de sécurité, découvrir de nouveaux outils et éviter l'obsolescence technique.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-icon"><i class="fas fa-users"></i></div>
+                    <h3>Pour qui ?</h3>
+                    <p>Pour les administrateurs systèmes, les développeurs, les DSI et toute personne souhaitant maintenir ses compétences à jour.</p>
+                </div>
+            </div>
+
+            <div class="research-topic">
+                <h4>Sujet d'étude 2024-2025 :</h4>
+                <h2>« L'apport de l'IA dans la Cyberdéfense proactive »</h2>
+            </div>
+
+            <div class="research-grid">
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-date">Avril 2024</span>
+                        <span class="article-source">ANSSI</span>
+                    </div>
+                    <div class="article-body">
+                        <h3>Sécurité des systèmes d'IA</h3>
+                        <p>L'Agence nationale publie ses premières recommandations pour sécuriser les IA génératives en entreprise.</p>
+                        <a href="https://cyber.gouv.fr" target="_blank" class="article-link">Lire le rapport <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-date">Juin 2024</span>
+                        <span class="article-source">LeMagIT</span>
+                    </div>
+                    <div class="article-body">
+                        <h3>L'essor des "Copilotes" SOC</h3>
+                        <p>Comment l'IA générative assiste les analystes cybersécurité pour trier les alertes et réagir plus vite.</p>
+                        <a href="https://www.lemagit.fr" target="_blank" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-date">Janv 2025</span>
+                        <span class="article-source">Gartner</span>
+                    </div>
+                    <div class="article-body">
+                        <h3>La "Guerre des IA"</h3>
+                        <p>Prévisions 2025 : Les cybercriminels utilisent l'IA pour des attaques polymorphes. Seule une défense automatisée peut riposter.</p>
+                        <a href="https://www.gartner.com" target="_blank" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-date">Fév 2025</span>
+                        <span class="article-source">Cloud Security</span>
+                    </div>
+                    <div class="article-body">
+                        <h3>Zero Trust & IA</h3>
+                        <p>L'intégration de l'IA dans les architectures Zero Trust pour une authentification continue et comportementale.</p>
+                        <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-date">Mars 2025</span>
+                        <span class="article-source">GreenIT.fr</span>
+                    </div>
+                    <div class="article-body">
+                        <h3>Sobriété Numérique</h3>
+                        <p>Comment optimiser les infrastructures systèmes pour réduire l'empreinte carbone des Data Centers.</p>
+                        <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-download-button">
+                <a href="veille.pdf" class="btn btn-primary">
+                    <i class="fas fa-file-download"></i> Télécharger le Dossier de Veille (.PDF)
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Une opportunité de stage ?</h3>
+                    <p>Je suis à la recherche d'un stage de 8 semaines (18 Mai - 03 Juillet 2026).</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>baysmuslim@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+33 6 95 13 05 64</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vitry-Sur-Seine, France</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://www.linkedin.com/in/muslim-bayschanov-55404a28a/" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/msb94r" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/mwpgnlrb" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Votre nom</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Votre email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Votre message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Envoyer</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2025 Muslim Bayschanov. Tous droits réservés.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="#" onclick="openModal('legal')" style="color: var(--primary-color); text-decoration: none; font-size: 0.85rem;">Mentions Légales</a>
+            </p>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
